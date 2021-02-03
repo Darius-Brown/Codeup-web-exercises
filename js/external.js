@@ -37,7 +37,7 @@
 
     var applyDiscount = ((premium || itemCount) && expired);
 
-    alert("Succecfully applied discount..? " + applyDiscount);
+    alert("Successfully applied discount..? " + applyDiscount);
 
 
 
