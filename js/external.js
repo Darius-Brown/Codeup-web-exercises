@@ -3,39 +3,41 @@
     var favColor = prompt("What is your favorite color?");
         alert("Great! " + favColor + " is my favorite color too!");
 
-    var mermaid =Number(prompt("How many days did you rent The Little Mermaid?"));
+    var mermaid =parseInt(prompt("How many days did you rent The Little Mermaid?"));
 
-    var bear =Number(prompt("How many days did you rent Brother Bear?"));
+    var bear =parseInt(prompt("How many days did you rent Brother Bear?"));
 
-    var herc =Number(prompt("How many days did you rent Hercules?"));
+    var herc =parseInt(prompt("How many days did you rent Hercules?"));
 
-        alert("The total price is" + mermaid + bear + herc *3 );
+        alert("The total price is" + (parseInt(mermaid *3)  + parseInt(bear *3) + parseInt(herc *3)));
 
-    var hoursGoogle = Number(prompt("How many hours did you work at Google"));
+    var hoursGoogle = parseInt(prompt("How many hours did you work at Google"));
 
-    var hoursAmazon = Number(prompt("How many hours did you work at Amazon"));
+    var hoursAmazon = parseInt(prompt("How many hours did you work at Amazon"));
 
-    var hoursFacebook = Number(prompt("How many hours did you work at Facebook"));
+    var hoursFacebook = parseInt(prompt("How many hours did you work at Facebook"));
 
-    var payGoogle = Number(alert("You earned $" + hoursGoogle *400 ));
+    var payGoogle = parseInt(hoursGoogle) *400;
 
-    var payAmazon = Number(alert("You earned $" + hoursAmazon *380 ));
+    var payAmazon = parseInt(hoursAmazon) *380;
 
-    var payFacebook = Number(alert("You earned $" + hoursFacebook *350 ));
+    var payFacebook = parseInt(hoursFacebook) *350;
 
-    var totalPay = Number(payFacebook + payAmazon + payGoogle);
+    var totalPay;
+    totalPay = parseInt(payFacebook) + parseInt(payAmazon)+ parseInt(payGoogle);
         alert("Your total pay this week is $" + totalPay);
 
+    var classFull = prompt("Are there any free seats available?");
+    var free = prompt("Is you schedule free in the designated time slot?");
+    var enrollment = alert("Checking if you can enroll... the answer is " + (classFull && free));
 
+    var itemCount = confirm("Is the total number of items in cart 2 or more?");
+    var expired = confirm("Are the items withing expiration date range");
+    var premium = confirm("Are you a premium member?");
 
-    var enrolled = prompt("Are you currently enrolled? \(answer with 'yes' or 'no'\)");
-    var schedFull = prompt("Is your current schedule full? \(answer with 'yes' or 'no'\)");
-    var seats = prompt("Are there any remaining seats in this class\(answer with 'yes' or 'no'\)");
-        alert("You are now enrolled.");
-    var itemCount = prompt("Enter number of items in cart");
-    var expired = prompt("Are any of the items currently expired?");
-    var premium = prompt("Are you a premium member?");
-        alert("discount applied");
+    var applyDiscount = ((premium || itemCount) && expired);
+
+    alert("Succecfully applied discount..? " + applyDiscount);
 
 
 
