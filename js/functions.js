@@ -9,7 +9,8 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello() {
-    return "Hello Codeup";
+    var name = 'Darius'
+    return "Hello " + name;
 }
 
 /**
