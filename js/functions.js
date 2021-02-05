@@ -1,5 +1,5 @@
 "use strict";
-
+(function(){
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -11,7 +11,7 @@
 function sayHello() {
     var name = 'Darius'
     return "Hello " + name;
-}
+    };
 
 /**
  * TODO:
@@ -30,7 +30,7 @@ console.log(helloMessage);
  * console.
  */
 var myName = "Darius"
-sayHello(myName)
+    sayHello(myName)
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -58,7 +58,7 @@ function isTwo(x){
     if (x === 2){
         return (true)}
     };
-console.log (isTwo(2));
+    console.log (isTwo(2));
 
 
 /**
@@ -72,11 +72,11 @@ console.log (isTwo(2));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-(function calculateTip(b,tp){
+function calculateTip(b,tp){
     var bill= b
     var tipPercentage = tp
         return b * tp
-})();
+};
 console.log(calculateTip(20, .20))
 console.log(calculateTip(25.50, .25))
 console.log(calculateTip(33.42, .15))
@@ -87,14 +87,11 @@ console.log(calculateTip(33.42, .15))
  * then display the dollar amount they should tip
  */
 
-(function calculateTip(b,tp){
-    var bill = prompt("What is your total bill?")
-    var tip = prompt("What tip percentage would you like to leave? \(decimal form\)")
-    var total = alert("Recommended tip $" + bill * tip);
-        return b * tp
-            console.log(calculateTip(b,tp))
-})();
-
+    var bill = Number(prompt("What is your total bill?"))
+    var tip = Number(prompt("What tip percentage would you like to leave? \(decimal form\)"))
+    var calculatedTip = (calculateTip(bill,tip));
+    var total = ("Recommended tip $" + calculatedTip);
+        alert(total);
 
 /**
  * TODO:
@@ -110,7 +107,9 @@ console.log(calculateTip(33.42, .15))
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(op,dp){
-    var discount = (op * dp / 100 )
+function applyDiscount(op,dp) {
+    var discount = (op * dp / 100)
     return op - discount
-} console.log(applyDiscount(100, 2));
+};
+    console.log(applyDiscount(100, 2))
+})();
