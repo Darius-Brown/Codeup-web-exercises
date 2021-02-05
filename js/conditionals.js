@@ -104,25 +104,26 @@
 
     var numbers = [ 0, 1, 2, 3, 4, 5];
     var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
-    var luckyNumber = (randomNumbers)
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var total = prompt("What is the bill total?");
 
         function randomNum(x,y) {
-            var luckyNumber = y
-            var total = x
+            y = luckyNumber
+            x = parseInt(total)
             if (y === 0) {
-                return (total)
+                return (x)
             } else if (y === 1) {
-                return (total * .9)
+                return (x * .9)
             } else if (y === 2) {
-                return (total * .75)
+                return (x * .75)
             } else if (y === 3) {
-                return (total * .65)
+                return (x * .65)
             } else if (y === 4) {
-                return (total * .50)
+                return (x * .50)
             } else if (y === 5) {
                 return (0)
             }
-        } console.log (randomNum(100));
+        } console.log (randomNum());
 
 
             /**
@@ -133,7 +134,7 @@
              l!') * price before the discount was, and what their price after the discount is.
              */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
 
             /**
              * TODO:
