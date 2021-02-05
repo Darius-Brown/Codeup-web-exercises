@@ -76,6 +76,9 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+   var userColor = prompt("What is your favorite color?")
+        alert(analyzeColor(userColor));
+
 
     /* ########################################################################## */
 
@@ -99,30 +102,53 @@
      * return value.
      */
 
-    /**
-     * TODO:
-     * Uncomment the line below to generate a random number between 0 and 6.
-     * Prompt the user for their total bill, then use your `calculateTotal` function
-     * and alerts to display to the user what their lucky number was, what their
-     * price before the discount was, and what their price after the discount is.
-     */
+    var numbers = [ 0, 1, 2, 3, 4, 5];
+    var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
+    var luckyNumber = (randomNumbers)
+
+        function randomNum(x,y) {
+            var luckyNumber = y
+            var total = x
+            if (y === 0) {
+                return (total)
+            } else if (y === 1) {
+                return (total * .9)
+            } else if (y === 2) {
+                return (total * .75)
+            } else if (y === 3) {
+                return (total * .65)
+            } else if (y === 4) {
+                return (total * .50)
+            } else if (y === 5) {
+                return (0)
+            }
+        } console.log (randomNum(100));
+
+
+            /**
+             * TODO:
+             * Uncomment the line below to generate a random number between 0 and 6.
+             * Prompt the user for their total bill, then use your `calculateTotal` function
+             * and alerts to display to the user what their lucky number was, what their
+             l!') * price before the discount was, and what their price after the discount is.
+             */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
-    /**
-     * TODO:
-     * Write some JavaScript that uses a `confirm` dialog to ask the user if they
-     * would like to enter a number. If they click 'Ok', prompt the user for a
-     * number, then use 3 separate alerts to tell the user:
-     *
-     * - whether the number is even or odd
-     * - what the number plus 100 is
-     * - if the number is negative or positive
-     *
-     * if what the user enters is not a number, use an alert to tell them that, and
-     * do *not* display any of the above information.
-     *
-     * Can you refactor your code to use functions?
-     * HINT: The way we prompt for a value could be improved
-     */
-})();
+            /**
+             * TODO:
+             * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+             * would like to enter a number. If they click 'Ok', prompt the user for a
+             * number, then use 3 separate alerts to tell the user:
+             *
+             * - whether the number is even or odd
+             * - what the number plus 100 is
+             * - if the number is negative or positive
+             *
+             * if what the user enters is not a number, use an alert to tell them that, and
+             * do *not* display any of the above information.
+             *
+             * Can you refactor your code to use functions?
+             * HINT: The way we prompt for a value could be improved
+             */
+        })();
