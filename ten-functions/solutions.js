@@ -74,8 +74,9 @@ function not(n){
 
 /**
 
- Define a function named addOne that takes in a single input. If the input
- is a number or a numeric string, return the value plus one.
+ Define a function named addOne that takes in a single input.
+ If the input is a number or a numeric string,
+ return the value plus one.
 */
  addOne(0)                    // 1
  addOne(2)                    // 3
@@ -88,9 +89,11 @@ function not(n){
  addOne(true)                 // NaN
  addOne(NaN)                  // NaN
 
-function addOne (a){
-    return(a + 1)
-    }
+function addOne (a) {
+    return (Number(a) + Number(1))
+}
+
+
 
 /**
 
@@ -191,8 +194,20 @@ function and (an,d){
  concat(true, true)                  // "truetrue"
 
 
-function concat (cc,ct){
-    return (cc + ct)
+function concat (cc,ct) {
+    var stringCc = String(cc)
+    var stringCt = String(ct)
+    return String(cc) + String(ct)
+    return cc + ct
 }
+
+
+
+
+
+
+
+
+
 
 
