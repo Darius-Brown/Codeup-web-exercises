@@ -65,7 +65,7 @@
         } else if (gumBall === 'indigo' ) {
             console.log('Finally! I got a indigo gumball!')
         } else if (gumBall === 'violet' ) {
-            console.log('Finally! I got a blue violet gumball!')
+            console.log('Finally! I got a violet gumball!')
         } else if (gumBall === 'green' ) {
             console.log('Finally! I got a green gumball!')
         }
@@ -107,7 +107,7 @@
     var luckyNumber = Math.floor(Math.random() * 6);
     var total = prompt("What is the bill total?");
 
-        function randomNum(x,y) {
+        function calculateTotal(x,y) {
             y = luckyNumber
             x = parseInt(total)
             if (y === 0) {
@@ -123,7 +123,7 @@
             } else if (y === 5) {
                 return (0)
             }
-        } console.log (randomNum());
+        } console.log (calculateTotal());
 
 
             /**
@@ -134,7 +134,13 @@
              l!') * price before the discount was, and what their price after the discount is.
              */
 // Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 5);
+    var userBill = prompt("what is your bill total?")
+    var userNumber = alert("You rolled a " + luckyNumber + "!")
+    var userReturnTotal = alert("Price before your roll $" + userBill)
+    var postDiscount = calculateTotal(userBill, luckyNumber)
+    var userFinalAlert = alert("Based on your roll of a " + luckyNumber + " your new bill total is " + postDiscount);
+    
 
             /**
              * TODO:
@@ -152,4 +158,28 @@
              * Can you refactor your code to use functions?
              * HINT: The way we prompt for a value could be improved
              */
+            var userConfirmation = confirm("Would you like to enter a number?")
+
+            var userString = prompt("Enter any number..")
+
+            var userNum = parseInt(userString);
+
+            var evenOrOdd = function modTwo(){
+                if (userNum % 2 === 0) {
+                    alert("The number is even.")
+                } else alert("The number is odd.")
+            }
+                alert(evenOrOdd());
+
+            var plusHundred = alert("Your number plus 100 is " + (parseInt(userNum) + parseInt(100)))
+
+            var posOrNeg = function posNeg(){
+                if(userNum > 0){
+                    alert("The number is positive.")
+                } else if (userNum < 0){
+                    alert("The number is negative.")
+                } else if (userNum = 0) {
+                    alert("the number is neither.")
+            }};
+                alert(posOrNeg());
         })();
