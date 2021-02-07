@@ -9,7 +9,10 @@ function sayHello(s) {
         return ("Hello, Alex!" )
     } else if (s === "Jane"){
         return ("Hello, Jane!")
+    } else if (s === "Pat"){
+        return ("Hello, Pat!")
     } else return("Hello, " + s)
 }
+
 
 
