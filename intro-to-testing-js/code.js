@@ -5,13 +5,11 @@ function helloWorld() {
 
 // helloWorld function
 function sayHello(s) {
-    if (s === "Alex"){
-        return ("Hello, Alex!" )
-    } else if (s === "Jane"){
-        return ("Hello, Jane!")
-    } else if (s === "Pat"){
-        return ("Hello, Pat!")
-    } else return("Hello, " + s)
+    if (s === String || s === null || s === Number || s === ""){
+        return ("Hello, " + s + "!")
+    } else if (s === true || s === false ) {
+        return ("Hello, World!")
+    } else return ("Hello, " + s + "!")
 }
 
 
