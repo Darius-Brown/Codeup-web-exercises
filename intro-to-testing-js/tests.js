@@ -24,8 +24,23 @@ describe('sayHello', function() {
     it('should return the string "Hello, World!" when executed', function() {
         expect(sayHello("World!")).toBe("Hello, World!");
     });
+
     it("should never return 'undefined' when called", function() {
         expect(sayHello()).not.toBe(undefined);
     });
 });
+describe('sayHello', function() {
+    it('should return the string "Hello, Jane!" when executed', function() {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+describe('sayHello', function() {
+    it('should return the string "Hello, Alex!" when executed', function () {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    });
+})});
+
+
+
+
+
 
