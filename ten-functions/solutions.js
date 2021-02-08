@@ -101,6 +101,9 @@ function addOne (a) {
  input is an even number or a string containing an even number, return true.
  Any other input should return false for the output.
 */
+function isEven(ev){
+ return (ev % 2 === 2)
+}
  isEven(2)                   // true
  isEven(-8)                  // true
  isEven(0)                   // true
