@@ -16,6 +16,15 @@ function isFive (F){
     return (F == 5)
 }
 
+function isEven (E){
+    if (E % 2 === 0) {
+        return true
+    } else if (E !== Boolean) {
+        return false
+    }
+}
+
+
 
 
 

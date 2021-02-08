@@ -49,10 +49,27 @@ describe('sayHello', function() {
     it('should return the string "Hello, World!" when executed', function () {
         expect(sayHello(false)).toBe("Hello, World!");
     })});
+
+
 describe('isFive', function() {
     it('should be a defined function', function () {
         expect(isFive("5")).toBe(true);
     })});
+
+
+describe('isEven', function() {
+    it('should be a defined function', function () {
+        expect(isEven(2)).toBe(true);
+        expect(isEven(-4)).toBe(true);
+        expect(isEven(3)).toBe(false);
+        expect(isEven("banana")).toBe(false);
+        expect(isEven("8")).toBe(true);
+        expect(isEven(Infinity)).toBe(false);
+        expect(isEven(true)).toBe(false);
+        expect(isEven()).toBe(false);
+    })});
+
+
 
 
 
