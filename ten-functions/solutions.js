@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- *
+ *git@github.com:CodeupClassroom/marco-practice-js-assessment.git
  * Write your solutions here.
  *
  * **Note**: While normally it is good practice to wrap your javascript in an
