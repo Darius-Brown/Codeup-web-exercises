@@ -24,6 +24,17 @@ function isEven (E){
     }
 }
 
+function isVowel (V){
+    var vwl = "a"|| vwl == "A" || vwl =="e"|| vwl =="E"|| vwl =="i"|| vwl =="I"|| vwl =="o"|| vwl =="O"|| vwl =="U"|| vwl =="u";
+        if (V == "a"|| V == "A" || V =="e"|| V =="E"|| V =="i"|| V =="I"|| V =="o"|| V =="O"|| V =="U"|| V =="u") {
+            return true
+    } else if (V === true || false ) {
+        return false
+    } else if (V !== Boolean) {
+            return false
+        }
+}
+
 
 
 

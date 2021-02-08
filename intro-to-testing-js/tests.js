@@ -69,6 +69,17 @@ describe('isEven', function() {
         expect(isEven()).toBe(false);
     })});
 
+describe('isVowel', function() {
+    it('should be a defined function', function () {
+        expect(isVowel("a")).toBe(true);
+        expect(isVowel("A")).toBe(true);
+        expect(isVowel("y")).toBe(false);
+        expect(isVowel(4)).toBe(false);
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel("banana")).toBe(false);
+        expect(isVowel()).toBe(false);
+    })});
+
 
 
 
