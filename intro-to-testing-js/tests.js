@@ -83,12 +83,12 @@ describe('isVowel', function() {
 describe('add', function() {
     it('should be a defined function', function () {
         expect(add(2,3)).toBe(5);
-
-
-
-
-
-
+        expect(add(-3,-9)).toBe(-12);
+        expect(add("5",6)).toBe(11);
+        expect(add("-4",10)).toBe(6);
+        expect(add("banana","split")).toBe(NaN);
+        expect(add(2,"apples")).toBe(NaN);
+        expect(add()).toBe(NaN);
     })});
 
 
