@@ -12,5 +12,10 @@ function sayHello(s) {
     } else return ("Hello, " + s + "!")
 }
 
+function isFive (F){
+    return (F == 5)
+}
+
+
 
 
