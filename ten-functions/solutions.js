@@ -1,6 +1,7 @@
 "use strict";
 
 /**
+ *
  * Write your solutions here.
  *
  * **Note**: While normally it is good practice to wrap your javascript in an
