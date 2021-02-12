@@ -1,34 +1,17 @@
-
-/**
-function showMultiplicationTable(num) {
-    for (var i = 1; i <= 7; i++) {
-        for (num = 1; num < 70; num++) {
-        } if (num % 7 === 0)
-        console.log("7 x " + i + "= " + num)
-    }
-}
-console.log(showMultiplicationTable());
-
-//1st attempt
-*/
 //Exercise 2
 
 function timesSeven(n){
     return n * 7;
 }
 
-function loopSeven(num){
+function showMultiplicationTable(num){
     for (num = 1; num <= 10; num++){
         console.log("7 x " + num + " = " + timesSeven(num));
     }
 }
-console.log(loopSeven());
+console.log(showMultiplicationTable());
 
 //Exercise 3
-
-function isEven(num){
-    return (num % 2 === 0)
-}
 
 function evenOrOdd (num){
     if (num % 2 === 0){
@@ -38,17 +21,18 @@ function evenOrOdd (num){
     }
 }
 
-function exerciseThree() {
+function exerciseThree(num) {
     var random = Math.floor((Math.random() * 200) + 20);
-    for (var i = 1; i <= 10; i++) {
-
-        if (i < 10) {
-            console.log(evenOrOdd(random++))
+    for (var x = 1; x <= 5; x++) {
+        num = 0;
+        for(var y = 1; y <= x; y++) {
+            num = num + random;
+            var result = console.log(evenOrOdd(num));
         }
-    }
 }
+}
+console.log(exerciseThree(0));
 
-exerciseThree(1);
 
 
 //Exercise 4
