@@ -17,10 +17,12 @@ var userNumber = prompt("Please enter an odd number between 1 & 50");
 
 for (var i = 1; i >= 50; i++) {
 
-} if (i % 2 === 1) {
-    console.log(i)
+} if (userNumber % 2 === 1) {
+    console.log(i += 2)
 } else if (userNumber = i) {
-    continue;
+
+
+
 }
 
 
