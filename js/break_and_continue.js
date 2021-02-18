@@ -13,6 +13,8 @@
  except for the number the user entered.
     Your output should look like this:
 */
+//SNOW DAY GIT PUSH
+
 var userNumber = prompt("Please enter an odd number between 1 & 50");
 
 for (var i = 1; i >= 50; i++) {
