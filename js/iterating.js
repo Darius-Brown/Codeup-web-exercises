@@ -46,11 +46,28 @@
      * - first: returns the first item in the array
      * - second: returns the second item in the array
      * - last: returns the last item in the array
-     *
      * Example:
      *  > first([1, 2, 3, 4, 5]) // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+function firstItem(array) {
+    return array[0]
+}
+
+console.log(firstItem([1, 2, 3, 4, 5]))
+
+function secondItem(array){
+    return array[1]
+}
+
+console.log(secondItem([1,2,3,4,5]))
+
+function lastItem(array){
+    return array[array.length -1];
+}
+
+console.log(lastItem([1,2,3,4,5]))
 
 })();
