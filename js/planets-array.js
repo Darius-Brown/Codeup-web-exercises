@@ -1,54 +1,50 @@
-"use strict";
-
 (function(){
+    "use strict";
 
-    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray = planetsString.split("|");
-    console.log(planetsArray)
-// function that uses reverse to get last element
+    var planets = [
+        'Mercury',
+        'Venus',
+        'Earth',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune'
+    ];
 
     /**
      * TODO:
-     * Convert planetsString to an array, and save it in a variable named
-     * planetsArray.
-     * console.log planetsArray to check your work
-
-
-
-
-     /**
-    function reversePlanets(array){
-        var versed = array.reverse();
-        return versed[0];
-    }
-console.log(reversePlanets(planetsArray));
-
- // from the lecture
- function makeArray(string) {
-    var output= [];
-    var planetArray = string.split("");
-
-    planetArray.forEach(function(str){
-        var planetArr = str.split(",");
-        output.push(planetArr.join(""));
-    });
-    return output;
-}
-     var newArr = makeArray(planetsString);
-
-     for (var i = 0; i < newArr.length; i++){
-         console.log(newArr[i]);
-     }
-*/
-    /**
-     * TODO:
-     * Create a string with <br> tags between each planet. console.log() your
-     * results. Why might this be useful?
-     *
-     * BONUS:
-     * Create another string that would display your planets in an undordered
-     * list. You will need an opening AND closing <ul> tags around the entire
-     * string, and <li> tags around each planet.
+     * Read each console log below, and write some javascript code to perform
+     * the step that it describes
      */
+
+    console.log('Adding "The Sun" to the beginning of the planets array.');
+    planets.unshift("The Sun");
+    console.log(planets);
+
+    console.log('Adding "Pluto" to the end of the planets array.');
+    planets.push();
+    console.log(planets);
+
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    planets.shift();
+    console.log(planets);
+
+    console.log('Removing "Pluto" from the end of the planets array.');
+    planets.pop();
+    console.log(planets);
+
+    console.log('Finding and logging the index of "Earth" in the planets array.');
+    planets.indexOf('Earth');
+    console.log(planets)
+
+
+    console.log("Reversing the order of the planets array.");
+    planets.reverse();
+    console.log(planets);
+
+    console.log("Sorting the planets array.");
+    planets.sort();
+    console.log(planets);
 
 })();
