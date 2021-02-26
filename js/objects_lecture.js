@@ -233,7 +233,7 @@ var theGarage = [
 console.log(theGarage);
 
 var turnMyCarOn = function (){
-    alert("Put the key ib the ignition and fired up the " + this.make + " " + this.model+ " just fine!")
+    alert("Put the key in the ignition and fired up the " + this.make + " " + this.model+ " just fine!")
 }
  myCar.turnOn = turnMyCarOn;
 

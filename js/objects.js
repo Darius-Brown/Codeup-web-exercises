@@ -60,12 +60,37 @@ console.log(person.sayHello());
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+    /*
+    var cameron = "180";
+    var bryan = "$250";
+    var George= "320";
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    function calculateDiscount(amount){
+        if (amount >= 200){
+            return (amount * .88);
+        } console.log(amount);
+    }
+    */
+     var shoppers = [
+         {name: 'Cameron', amount: 180},
+         {name: 'Ryan', amount: 250},
+         {name: 'George', amount: 320}
+    ];
+//passed the variable name shopper into the forEach function
+//in order to access each object in the array individually
+
+    shoppers.forEach(function(shopper) {
+        var discountedPrice = (shopper.amount * .88)
+        var noDiscount = shopper.amount;
+        if (shopper.amount >= 200){
+            console.log(shopper.name + "'s total bill is " + discountedPrice)
+        } else if (shopper.amount < 200){
+            return console.log(shopper.name + "'s total bill is " + noDiscount);
+        };
+
+    })
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a

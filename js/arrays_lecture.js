@@ -204,31 +204,44 @@ for (var i = 0;i < instructors.length; i++){
 * 						FOR EACH ARRAY
 *************************************************************** */
 
+
+/**shapes.forEach(printShape)
+
+function myForEach(array, callback) {
+       for(var i = 0; i < array.length; i++) {
+           var currentItem = array[i];
+           callback(currentItem, i, array);
+       }
+   }
+
+
+*/
+
+
 // TODO TOGETHER: Using a for each loop, console.log each shape from the shapes array
-for (var i = 0;i < shapes.length; i++) {
-    console.log(shapes[i])
-}
+shapes.forEach( function(shape){
+    console.log(shape)
+})
 
 // TODO TOGETHER: Using a for each loop, console.log each element from the following array: var pies = ["apple", "cherry", "key lime", "huckleberry"];
-    for (var i = 0;i < pies.length; i++) {
-        console.log(pies[i])
-    }
+pies.forEach( function(pie){
+    console.log(pie)
+})
 
 
 // TODO: Using a for each loop, iterate through the instructors array and console.log each instructor
-for (var i = 0;i < instructors.length; i++) {
-    console.log(instructors[i])
-}
+instructors.forEach( function(instruct){
+    console.log(instruct)
+})
 
 
 // TODO: Using a for each loop, iterate through the daysOfTheWeek array and console.log each day of the week
-for (var i = 0;i < daysOfTheWeek.length; i++) {
-    console.log(daysOfTheWeek[i])
-}
+daysOfTheWeek.forEach( function(day){
+    console.log(day)
+})
 
 
 // TODO: Using a for each loop, iterate through the favoriteFoods array and console.log each favorite food
-
-for (var i = 0;i < favoriteFoods.length; i++) {
-    console.log(favoriteFoods[i])
-}
+favoriteFoods.forEach( function(food){
+    console.log(food)
+})
