@@ -13,15 +13,12 @@
      */
 
     var person = {
-        firstname:"Darius",
-        lastname:"Brown"
+        firstname: "Darius",
+        lastname: "Brown"
     };
 
     console.log(person.firstname);
     console.log(person.lastname);
-
-
-
 
 
     /**
@@ -43,8 +40,7 @@
         }
     }
 
-console.log(person.sayHello());
-
+    console.log(person.sayHello());
 
 
     /** TODO:
@@ -71,25 +67,25 @@ console.log(person.sayHello());
         } console.log(amount);
     }
     */
-     var shoppers = [
-         {name: 'Cameron', amount: 180},
-         {name: 'Ryan', amount: 250},
-         {name: 'George', amount: 320}
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
     ];
 //passed the variable name shopper into the forEach function
 //in order to access each object in the array individually
 
-    shoppers.forEach(function(shopper) {
+    shoppers.forEach(function (shopper) {
         var discountedPrice = (shopper.amount * .88)
         var noDiscount = shopper.amount;
-        if (shopper.amount >= 200){
+        if (shopper.amount >= 200) {
             console.log(shopper.name + "'s total bill is " + discountedPrice)
-        } else if (shopper.amount < 200){
+        } else if (shopper.amount < 200) {
             return console.log(shopper.name + "'s total bill is " + noDiscount);
-        };
+        }
+        ;
 
     })
-
 
 
     /** TODO:
@@ -106,18 +102,18 @@ console.log(person.sayHello());
      */
 
     var harryPotter = {
-        title:"Harry Potter",
+        title: "Harry Potter",
         author: "J.K Rowling"
     }
 
     var macBeth = {
         title: "MacBeth",
-        author:"William Shakespeare"
+        author: "William Shakespeare"
     }
 
-    var seatOfTheSoul= {
+    var seatOfTheSoul = {
         title: "Seat of the Soul",
-        author:"Gary Zukav"
+        author: "Gary Zukav"
     }
 
     var romeoAndJuliet = {
@@ -165,8 +161,8 @@ console.log(person.sayHello());
      *      ...
      */
 
-    books.forEach(function(author,title) {
-        console.log(author,title);
+    books.forEach(function (author, title) {
+        console.log(author, title);
     })
 
     /**
@@ -179,5 +175,20 @@ console.log(person.sayHello());
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(bookTitle, authorFirstName, authorLastName) {
+        var newBook = {
+            title: bookTitle,
+            lastName: authorLastName
+        }
+    }
+
+    return newBook;
+//}
+
+    function showBookInfo(bookObject, bookNumber){
+        console.log("Book # " + (bookNumber + 1));
+        console.log("Title: " bookObject.title);
+    }
+
 
 })();
