@@ -27,7 +27,7 @@
     circle.logInfo(false);
     console.log("Area of circle rounded");
 
-    console.log(circle.logInfo(true);
+    console.log(circle.logInfo(true));
     // TODO: Change the radius of the circle to 5.
 
     // log info about the circle
