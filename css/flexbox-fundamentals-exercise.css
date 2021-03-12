@@ -2,36 +2,36 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     background-color: #98cbf6;
-    display: flex;
-    justify-content: center;
 }
 
 .card {
-    height: 50px;
-    width: 80%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
-.card>section {
+.border {
+    border: solid black 3px;
+}
+
+.section {
     display: flex;
     justify-content: space-between;
 }
 
-header.container {
+.container {
     display: flex;
     justify-content: center;
 }
 
-main.container {
-    background-color: #a6eb99;
-}
-
-
 .green-box{
     height: 5px;
     width: 25px;
-    border: solid black 1px;
     background-color: green;
     padding: 5px;
     margin: 10px;
@@ -39,16 +39,10 @@ main.container {
     justify-content: space-evenly;
 }
 
-.border>.purple-box {
-    display: flex;
-    height: 250px;
-}
-
 .purple-box {
     height: 10px;
     width: 100%;
     background-color: purple;
-    border: solid black 3px;
     display: flex;
     margin: 1px;
 }
@@ -91,13 +85,6 @@ main.container {
     justify-content: space-around;
 }
 
-
-.border .grey-box{
-    height: 20px;
-    width: 20px;
-    margin: 15px;
-    background-color: lightgray;
-}
 
 .grey-box {
     height: 20px;
