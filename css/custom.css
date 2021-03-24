@@ -1,12 +1,108 @@
-.jumbotron {
-    position: relative;
-    text-align: center;
-    color: white;
+img.headimage {
+    height: 105px;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+}
+.tall-row{
+    margin: 5px;
+    background-color: lightgray;
 }
 
-h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.jumbotron {
+    margin: 0px;
+}
+
+.test {
+    font-family: Anton, sans-serif;
+    font-size: 28px;
+    color: white;
+    width: 150px;
+    height: 150px;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid white;
+}
+
+.large-p {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.nav-font {
+    font-weight: lighter;
+    font-size: 17px;
+    margin: 3px;
+}
+
+h1.new-header{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h2.new-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Abel', sans-serif;
+}
+
+h1{
+    height: 64px;
+    font-family: 'Anton', sans-serif;
+}
+
+h2{
+    height: 48px;
+    font-family: 'Anton', sans-serif;
+}
+
+h3{
+    height: 40px;
+    font-family: 'Anton', sans-serif;
+}
+
+h4{
+    height: 32px;
+    font-family: 'Anton', sans-serif;
+}
+
+h5{
+    height: 28px;
+    font-family: 'Anton', sans-serif;
+}
+
+p.foot {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+img.ipad {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 70%;
+    margin:auto;
+    border: 10px solid #e6e6e6;
+    border-radius: 7px;
+}
+
+.btn-circle {
+    font-size: 12px;
+    height: 18px;
+    width: 18px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
