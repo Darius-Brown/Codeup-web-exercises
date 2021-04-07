@@ -176,6 +176,7 @@ myCar.owner = carOwner;
 //    name: "Darius Brown"
 //}
  console.log(myCar.owner);
+/**band['genre'] = "Metal";*/
 
  myCar.turnOn = function (){
      alert("Putting the key in the ignition and fired up the " + myCar.make + " " + myCar.model)

@@ -187,7 +187,7 @@
 
     function showBookInfo(bookObject, bookNumber){
         console.log("Book # " + (bookNumber + 1));
-        console.log("Title: " bookObject.title);
+        console.log("Title: " + (bookObject.title));
     }
 
 

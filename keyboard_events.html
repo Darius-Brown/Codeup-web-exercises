@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    $(document).ready(function(){
+        /*
+        recognizes all keyboard presses
+        repeats when held down
+        */
+/*
+       $(document).keydown(function (e){
+           console.log(e.keyCode);
+           console.log(e.key);
+           console.log('keydown');
+       })
+*/
+        /*
+        recognizes the character that is typed
+        only recognizes keys that can have a typed output
+         */
+    /*
+    $(document).keypress(function (e){
+        console.log(e.keyCode);
+        console.log(e.key);
+        console.log('keypress');
+    })
+    */
+        $(document).keyup(function (e){
+            console.log('key up' + e.key);
+        })
+    });
+    //$('h1').click(function (){
+    //    console.log('h1 clicked')
+    //})
+
+    $('h1').on('click', function (){
+        console.log('h1 on event clicked')
+    })
+
+    $(document).on('keyup', function (e){
+        console.log('on key up', e.key);
+    })
+
+    //removes all events from a  selector or a specific event/selector
+    $(document).off('keyup');
+    $('h1').off('click');
+
+    e.preventDefault();
+    //prevents events from propagating up the event tree
+
+</script>
+
+</body>
+</html>
