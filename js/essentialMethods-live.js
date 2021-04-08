@@ -12,13 +12,14 @@ console.log($('#best-seller-cont').html());
 var html = " ";
 
 html = "<h4 class='best-seller-header'>Our top sellers</h4>" +
-    "<ol><li>Fedora Hats</li>" +
-    "<li>Baseball Hats</li>" +
-    "<li>Cowboys Hats</li></ol>"
+    "<ol><li class=\"hat-sold\">Fedora Hats</li>" +
+    "<li class=\"hat-sold\">Baseball Hats</li>" +
+    "<li class=\"hat-sold\">Cowboys Hats</li></ol>"
 
 //TODO: Now, let's get back into that "best-seller-cont" and replace that HTML!
-
+/*
 $("#best-seller-cont").html(html);
+*/
 
 //TODO Together: Can we make a click event that changes "Howell's" to "Marco's" when we click on it? Help me out!
 
@@ -48,13 +49,13 @@ $("h1").addClass("text-uppercase")
 //TODO Together: Can you assist me in removing the "bg-dark" background from our FOOTER?
 $('footer').removeClass("bg-dark");
 //TODO: I have a custom css class known as hi-lite - .toggleClass() with a .click() would be a neat way to use it
-/*
+
 $('*').click(function (e){
     e.preventDefault();
     var ele = $(e.target);
     ele.toggleClass('hi-lite');
 })
-*/
+
 //Bonus activity:
 
 //TODO: Create a variable to store HTML - use jQuery to get the entire nav element's inner HTML. Console.log your variable to confirm the contents.
@@ -82,19 +83,31 @@ $('.container').css({
 //traversing
 
 //.each() - iterate over each matched element to do some stuff
-//TODO: Let's change the last two lis of the class .hat-sold to "Baseball hats" as well
+//TODO: Let's change the last two lis of the class .hat-sold to "Fedora hats" as well
+
+$('.hat-sold').each(function (index, ele){
+    console.log(ele);
+    if(index !== 0) {
+        $(ele).html("Fedora hats") // set html to value
+    }
+})
 
 //.first()
 //TODO: Let's change the first list item in the class of .hat-sold from "Baseball hats" to "Porkpie hats"
+$('.hat-sold').first().html('Porkpie hats');
 
 //.last()
 //TODO Together: Let's change the last li in the class of .hat-sold to be Fancy hats - italicized! ! !
-
+$('.hat-sold').last().html('<em>Fancy Hats</em>');
 //.parent()
 //TODO: Let's pop up the tree to the parent (<ol>) and use .css to change the list-style-type
+$('.hat-sold').parent().css('list-style-type', 'upper-roman');
 
 //.children()
 //TODO Together: What ID would I need to target to see all of the HTML, as children, that we've been manipulating so far?
-
+console.log($('#best-seller-cont').children());
 //.next()
 //TODO: Let's slide across branches (sibling to sibling) on our tree and change the HTML within the ordered list we find there to only show Top Hats! !
+console.log('.best-seller-header').next().html('<li>Top Hats</li>' +
+    '<li>Top Hats</li>' +
+    '<li>Top Hats</li>');
