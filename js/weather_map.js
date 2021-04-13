@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 // geocode("15900 La Cantera Pkwy Ste 25180, San Antonio, TX 78256", mapboxToken).then(function(results){
 //     console.log(results);
-//     pizzaMap.flyTo(results);
+//     weatherMap.flyTo(results);
 // })
 
 
@@ -57,7 +57,7 @@ $(document).ready(function () {
     });
 
 
-    // dblclick function to update map with markers
+    // dblclick function to update map  with markers, and also updates weather forecast below the map
     weatherMap.on('dblclick', function(e) {
         console.log('A dblclick event has occurred at ' + e.lngLat);
         var lng = e.lngLat;
@@ -75,44 +75,33 @@ $(document).ready(function () {
             console.log(results);
             //console.log(JSON.stringify(results))
             //$.each(results, function (index, weather) {
+            var result = results;
             var content = "";
-            content += "<li>" + JSON.stringify(results, null, 1) + "</li>"
-
+            //content += "<li>" + JSON.stringify(results, null, 1) + "</li>"
+            content += "<li>" + JSON.stringify(results.city) + "</li>"
+            content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
             $('#clickUpdateWeather').append(content);
             // });
         });
 
-
-
-
         var clickMarker = new mapboxgl.Marker({color: "gold"})
             .setLngLat(e.lngLat)
             .addTo(weatherMap)
     });
+//Weathermap that updates on text input
+
+    var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+        accessToken: mapboxgl.accessToken, // Set the access token
+        placeholder: 'Search',
+        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+        marker: false, // Do not use the default marker style
+    });
+
+// Add the geocoder to the map
+    weatherMap.addControl(geocoder);
 
 
 
-//geocode function that takes in user input and updates map with marker.
-
-    // var user = userInput;
-    //
-    //
-    //  geocode(user, mapboxToken).then(function (results) {
-    //         console.log(results)
-    //
-    //         var popup = new mapboxgl.Popup()
-    //             .setHTML('<h6>search result..</h6>')
-    //
-    //         new mapboxgl.Marker()
-    //             .setLngLat(results)
-    //             .setPopup(popup)
-    //             .addTo(weatherMap)
-    //     })
-    //
-    //
-    // var userInput = document.querySelector('#input');
-    // var submitButton = document.querySelector('#submit');
-    // submitButton.addEventListener('click', geocode);
 });
