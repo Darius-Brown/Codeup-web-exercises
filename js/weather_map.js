@@ -10,24 +10,29 @@ $(document).ready(function () {
 //     zoom: 8
 // }
 
-    var pizzaMap = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-98.618436, 29.593404], // starting position [lng, lat]
-        zoom: 14// starting zoom
+    var weatherMap = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.618436, 29.593404],
+        zoom: 14
+        });
+
+    weatherMap.on('dblclick', function(e) {
+        console.log('A dblclick event has occurred at ' + e.lngLat);
     });
+
 
 // var map = new mapboxgl.Map(mapOptions);
 
-    var pizzaMarker = new mapboxgl.Marker({color: "gold"})
+    var weatherMarker = new mapboxgl.Marker({color: "gold"})
         .setLngLat([-98.618436, 29.593404])
-        .addTo(pizzaMap)
+        .addTo(weatherMap)
 
-    var pizzaPopup = new mapboxgl.Popup()
-        .setHTML("<p>Grimaldi's The best Pizza in San Antonio</p>")
-// .addTo(pizzaMap)
+    var weatherPopup = new mapboxgl.Popup()
+        .setHTML("<p>Test marker for weather map</p>")
+// .addTo(weatherMap)
 
-    pizzaMarker.setPopup(pizzaPopup)
+    weatherMarker.setPopup(weatherPopup)
 
 // geocode("15900 La Cantera Pkwy Ste 25180, San Antonio, TX 78256", mapboxToken).then(function(results){
 //     console.log(results);
@@ -37,7 +42,7 @@ $(document).ready(function () {
 
 // Open Weather
 //
-    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+    $.get("https://api.openweathermap.org/data/2.5/forecast?q", {
         appid: OPEN_WEATHER_APPID,
         lat: 29.4260,
         lon: -98.4861,
@@ -45,61 +50,38 @@ $(document).ready(function () {
         exclude: "current,minutely,hourly,alerts"
     }).done(function (results) {
         console.log(results);
-        console.log(JSON.stringify(results))
-        $.each(results, function (index, weather) {
+        //console.log(JSON.stringify(results))
+        //$.each(results, function (index, weather) {
             var content = "";
-            content += "<p>" + JSON.stringify(results) + "</p>"
-            console.log(content);
-            $('#main').append(content);
-        });
+            content += "<li>" + JSON.stringify(results, null, 5) + "</li>"
+
+        //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
+
+
+
+        $('#main').append(content);
+       // });
     });
-//clouds: 60
-// ​​​
-// dew_point: 62.82
-// ​​​
-// dt: 1618250400
-// ​​​
-// feels_like: Object { day: 88.18, night: 66.11, eve: 89.46, … }
-// ​​​
-// humidity: 44
-// ​​​
-// pop: 0.66
-// ​​​
-// pressure: 1007
-// ​​​
-// rain: 1.9
-// ​​​
-// sunrise
-//     function generateWeather(){
-//         var weatherRequest = $.ajax("#");
-//
-//         weatherRequest.done(function(data){
-//
-//             $.each(data, function(index, book){
-//                 var content = "";
-//                 content += "<h2>" + book.title + "</h2>"
-//                 content += "<h4>" + book.author + "</h4>"
-//                 console.log(content);
-//                 $('#main').append(content);
-//             });
-//         });
 
-// $.get("https://api.openweathermap.org/data/2.5/onecall", {
-//     appid: OPEN_WEATHER_APPID,
-//     lat: 29.4260,
-//     lon: -98.4861,
-//     units: "imperial",
-//     exclude: "current,minutely,hourly,alerts"
-// }).done(function (results){
-//     console.log(results);
-// })
+//geocode function that takes in user input and updates map with marker.
 
-// $.get("https://api.openweathermap.org/data/2.5/forecast?", {
-//     q: "San Antonio, US",
-//     apiid: OPEN_WEATHER_APPID,
-// }).done(function (results){
-//     console.log(results);
-// })
-
-
+    // var user = userInput;
+    //
+    //
+    //  geocode(user, mapboxToken).then(function (results) {
+    //         console.log(results)
+    //
+    //         var popup = new mapboxgl.Popup()
+    //             .setHTML('<h6>search result..</h6>')
+    //
+    //         new mapboxgl.Marker()
+    //             .setLngLat(results)
+    //             .setPopup(popup)
+    //             .addTo(weatherMap)
+    //     })
+    //
+    //
+    // var userInput = document.querySelector('#input');
+    // var submitButton = document.querySelector('#submit');
+    // submitButton.addEventListener('click', geocode);
 });
