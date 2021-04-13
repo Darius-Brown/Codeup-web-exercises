@@ -19,6 +19,9 @@ $(document).ready(function () {
 
     weatherMap.on('dblclick', function(e) {
         console.log('A dblclick event has occurred at ' + e.lngLat);
+        var clickMarker = new mapboxgl.Marker({color: "gold"})
+            .setLngLat(e.lngLat)
+            .addTo(weatherMap)
     });
 
 
@@ -53,7 +56,7 @@ $(document).ready(function () {
         //console.log(JSON.stringify(results))
         //$.each(results, function (index, weather) {
             var content = "";
-            content += "<li>" + JSON.stringify(results, null, 5) + "</li>"
+            content += "<li>" + JSON.stringify(results, null, 1) + "</li>"
 
         //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
