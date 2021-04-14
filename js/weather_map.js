@@ -75,11 +75,17 @@ $(document).ready(function () {
             console.log(results);
             //console.log(JSON.stringify(results))
             //$.each(results, function (index, weather) {
-            var result = results;
             var content = "";
-            //content += "<li>" + JSON.stringify(results, null, 1) + "</li>"
-            content += "<li>" + JSON.stringify(results.city) + "</li>"
-            content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            //for (var i = 0; i<results.list.length;i++)
+            content += "<li>" + JSON.stringify(results.list[0].main) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
             $('#clickUpdateWeather').append(content);
@@ -90,7 +96,10 @@ $(document).ready(function () {
             .setLngLat(e.lngLat)
             .addTo(weatherMap)
     });
+
+
 //Weathermap that updates on text input
+
 
     var geocoder = new MapboxGeocoder({ // Initialize the geocoder
         accessToken: mapboxgl.accessToken, // Set the access token
