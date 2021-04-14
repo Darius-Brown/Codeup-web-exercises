@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    color: deeppink;
+}
+
+
+/* bootstrap.min.css | https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css */
+
+p {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#clickUpdateWeather {
+    display: flex;
+    flex-direction: column;
+}
+
+div#main {
+    width:100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    flex-wrap: wrap;
+}

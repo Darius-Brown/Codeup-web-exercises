@@ -48,11 +48,13 @@ $(document).ready(function () {
         //console.log(JSON.stringify(results))
         //$.each(results, function (index, weather) {
             var content = "";
-            content += "<li>" + JSON.stringify(results, null, 1) + "</li>"
+            for (var i = 0; i < 40; i++)
+            content += "<p>" + (results.list[i].dt_txt) + JSON.stringify(results.list[i].main,null, 2) + "</p>";
+           // content += "<li>" + (results.list.dt,null, 2) + "</li>";
 
         //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
-        $('#main').append(content);
+        $('#main').html(content);
        // });
     });
 
@@ -77,7 +79,7 @@ $(document).ready(function () {
             //$.each(results, function (index, weather) {
             var content = "";
             //for (var i = 0; i<results.list.length;i++)
-            content += "<li>" + JSON.stringify(results.list[0].main) + "</li>"
+            content += "<p>" + JSON.stringify(results.list[0].main) + "</p>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
@@ -88,7 +90,7 @@ $(document).ready(function () {
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
-            $('#clickUpdateWeather').append(content);
+            $('#clickUpdateWeather').html(content);
             // });
         });
 
