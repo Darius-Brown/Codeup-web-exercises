@@ -102,6 +102,35 @@ $(document).ready(function () {
 // Add the geocoder to the map
     weatherMap.addControl(geocoder);
 
+// A custom marker that loads on user input
+// After the map style has loaded on the page,
+// add a source layer and default styling for a single point
+    weatherMap.on('load', function() {
+        weatherMap.addSource('single-point', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: []
+            }
+        });
+
+        weatherMap.addLayer({
+            id: 'point',
+            source: 'single-point',
+            type: 'circle',
+            paint: {
+                'circle-radius': 15,
+                'circle-color': 'hotpink'
+            }
+        });
+
+        // Listen for the `result` event from the Geocoder
+        // `result` event is triggered when a user makes a selection
+        //  Add a marker at the result's coordinates
+        geocoder.on('result', function(e) {
+            weatherMap.getSource('single-point').setData(e.result.geometry);
+        });
+    });
 
 
 });
