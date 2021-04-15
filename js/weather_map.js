@@ -16,15 +16,15 @@ $(document).ready(function () {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-98.618436, 29.593404],
-        zoom: 14
+        zoom: 11
         });
 
-    var weatherMarker = new mapboxgl.Marker({color: "gold"})
+    var weatherMarker = new mapboxgl.Marker({color: "#11787d"})
         .setLngLat([-98.618436, 29.593404])
         .addTo(weatherMap)
 
     var weatherPopup = new mapboxgl.Popup()
-        .setHTML("<p>Test marker for weather map</p>")
+        .setHTML("<p>Starting point for forecast</p>")
         .addTo(weatherMap)
 
     weatherMarker.setPopup(weatherPopup)
@@ -49,7 +49,7 @@ $(document).ready(function () {
         //$.each(results, function (index, weather) {
             var content = "";
             for (var i = 0; i < 40; i++)
-            content += "<p>" + (results.list[i].dt_txt) + JSON.stringify(results.list[i].main,null, 2) + "</p>";
+            content += "<p class='forecast'>" + (results.list[i].dt_txt) + JSON.stringify(results.list[i].main,null, 2) + "</p>";
            // content += "<li>" + (results.list.dt,null, 2) + "</li>";
 
         //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
@@ -79,7 +79,7 @@ $(document).ready(function () {
             //$.each(results, function (index, weather) {
             var content = "";
             //for (var i = 0; i<results.list.length;i++)
-            content += "<p>" + JSON.stringify(results.list[0].main) + "</p>"
+            content += "<h6>" + JSON.stringify(results.list[0].main, null, 2) + "</h6>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
@@ -90,13 +90,18 @@ $(document).ready(function () {
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
-            $('#clickUpdateWeather').html(content);
+            $('#main').append(content);
             // });
         });
 
-        var clickMarker = new mapboxgl.Marker({color: "gold"})
+        var clickMarker = new mapboxgl.Marker({color: "#11787d"})
             .setLngLat(e.lngLat)
             .addTo(weatherMap)
+        var clickPopup = new mapboxgl.Popup()
+            .setHTML("<p>Displaying current weather at double-clicked location..</p>")
+            .addTo(weatherMap)
+
+        clickMarker.setPopup(clickPopup)
     });
 
 
@@ -141,6 +146,17 @@ $(document).ready(function () {
         geocoder.on('result', function(e) {
             weatherMap.getSource('single-point').setData(e.result.geometry);
         });
+    });
+
+
+
+
+    weatherMap.on('load', function() {
+        var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
+        var mapDiv = document.getElementById('map');
+                mapCanvas.style.width = '100%';
+                mapDiv.style.width = '100%';
+
     });
 
 

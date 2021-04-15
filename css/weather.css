@@ -1,24 +1,55 @@
 * {
     box-sizing: border-box;
-    color: deeppink;
 }
-
 
 /* bootstrap.min.css | https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css */
 
-p {
+.forecast {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    flex-wrap: wrap;
+    width: 200px;
+    padding: 5px;
+    margin: 7.5px;
+    border-radius: 1em;
+    color: #6ff6fd;
+    background-color: #11787d;
+    box-shadow: .4em .2em .5em #37797d;
 }
 
-#clickUpdateWeather {
+.headr {
+    display: flex;
+    justify-content: center;
+    color: #6ff6fd;
+    background-color: #11787d;
+    margin-bottom: 0em;
+}
+
+h6{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 165px;
+    border: solid black 1px;
+    background-color: #11787d;
 }
+
+h5{
+    display: flex;
+    justify-content: center;
+    color: #6ff6fd;
+    background-color: #11787d;
+}
+
+.head{
+    width: 100%;
+    background-color: #6ff6fd;
+ }
 
 div#main {
-    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container {
@@ -26,4 +57,30 @@ div#main {
     width: 100%;
     height: 40%;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#map {
+    position:relative;
+    top:0; bottom:0;
+    width:100%;
+    transition: all 0.3s;
+}
+.button {
+    color: #fff;
+    background-color: #555;
+    padding: 1em;
+    margin: 1em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    border-radius: 0.5em;
+    border-bottom: 2px #222 solid;
+    cursor: pointer;
+}
+
+.mapboxgl-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
