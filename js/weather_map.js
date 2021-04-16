@@ -49,7 +49,8 @@ $(document).ready(function () {
         //$.each(results, function (index, weather) {
             var content = "";
             for (var i = 0; i < 40; i++)
-            content += "<p class='forecast'>" + (results.list[i].dt_txt) + JSON.stringify(results.list[i].main,null, 2) + "</p>";
+            // content += "<p class='forecast'>" + (results.list[i].dt_txt) + JSON.stringify(results.list[i].main,null, 2) + "</p>";
+            content += "<p class='forecast'>" + JSON.stringify(results.city.name, null, 2) +  JSON.stringify(results.list[i].dt_txt, null, 2) + JSON.stringify(results.list[i].main.temp, null, 2) + JSON.stringify(results.list[i].main.humidity) + "</p>";
            // content += "<li>" + (results.list.dt,null, 2) + "</li>";
 
         //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
@@ -79,14 +80,7 @@ $(document).ready(function () {
             //$.each(results, function (index, weather) {
             var content = "";
             //for (var i = 0; i<results.list.length;i++)
-            content += "<h6>" + JSON.stringify(results.list[0].main, null, 2) + "</h6>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
-            // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
+            content += "<h6>" + JSON.stringify(results.city.name, null, 2) + JSON.stringify(results.list[0].main.temp, null, 2) + JSON.stringify(results.list[0].dt_txt, null, 2) + JSON.stringify(results.list[0].main.humidity) + "</h6>";
             // content += "<li>" + JSON.stringify(results.list[0]) + "</li>"
             //var jsonPretty = JSON.stringify(JSON.parse(results),null,2);
 
