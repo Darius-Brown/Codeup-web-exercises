@@ -57,18 +57,18 @@ console.log(emails);
 let yearsSum = users.reduce(function(total, user){
     return user.yearsOfExperience + total;
 },0)
-console.log(yearsSum);
+
+let average = yearsSum / users.length;
+console.log(average);
 
 
 
-let longest = users.reduce(function (highest, user){
-    let currentLength = user.email.length;
-        console.log(currentLength);
-    if (currentLength >= 18) {
-        return highest += user.email;
-    } else { return highest += ""};
+let longestEmail = users.reduce(function (longestEmail, user){
+   if (user.email.length > longestEmail.length) {
+       longestEmail = user.email;
+   }    return longestEmail;
 }," ")
-console.log(longest);
+console.log(longestEmail);
 
 
 
